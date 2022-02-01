@@ -193,8 +193,8 @@ function update() {
           j == 0 && i==5? l.fillStyle = "#2F4F4F" : console.log();
 
       j == 1 && i!=3 && i!=7? l.fillStyle = "#A0522D" : console.log();
-      j==1 && i==3 ? l.fillStyle = "##2F4F4F" : console.log();
-      j==1 && i==7 ? l.fillStyle = "##2F4F4F" : console.log();
+      j==1 && i==3 ? l.fillStyle = "#2F4F4F" : console.log();
+      j==1 && i==7 ? l.fillStyle = "#2F4F4F" : console.log();
       j == 2 && i!=1 && i!=5? l.fillStyle = "#D2691E" : console.log();
       j==2 && i==1 ? l.fillStyle = "#2F4F4F" : console.log();
       j==2 && i==5 ? l.fillStyle = "#2F4F4F" : console.log();
