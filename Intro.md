@@ -17,6 +17,6 @@
  - *Created a new intro page and added audio to background.*
    
  
- - ### *Updated code: [BrickBreakerupdated](https://github.com/kabirbajaj123/BrickBreaker-new_features)*
+ - ### *Updated code: [BrickBreakerupdated](https://github.com/kabirbajaj123/BRICKBREAKER.GameChangers)*
  - #### *Developers:Harsh Kavediya and Kabir Bajaj*.
 
