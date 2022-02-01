@@ -1,6 +1,9 @@
 
 
 
+
+
+
 canvas = document.getElementById("myCanvas");
 l = canvas.getContext("2d");
 
@@ -30,20 +33,17 @@ var initializeOnlyOnce = false;
 
 
 function setLevel(){
-   var level = prompt("Select Level (Easy, Normal, Hard)", "Hard");
+   var level = prompt("Enter your choice\n E - Easy\n N - Normal\n H - Hard", "E");
 
-  if (level == "Easy") {
-    speed = 0.5;
+  if (level == "E" || level=="e") {
+    speed = 1;
  
   }
-  if (level == "Normal") {
+  if (level == "N" || level=="n") {
     speed = 2;
   }
-  if (level == "Hard") {
+  if (level == "H" || level=="h") {
     speed = 3;
-  }
-  if (level == "Devil") {
-    speed = 4;
   }
 
 }
@@ -74,6 +74,8 @@ function playerCollisionLogic(){
     }
 
 }
+    
+
 
 
 function wallCollisionLogic(){
@@ -161,7 +163,7 @@ function update() {
     console.log(y, initializeOnlyOnce)
     //Playing Area
 
-    l.fillStyle = "#120052";
+    l.fillStyle = "#00CED1";
     l.beginPath();
     l.rect(0,0,canvas.width,canvas.height);
     l.fill();
@@ -175,7 +177,7 @@ function update() {
 
     //Player
 
-    l.fillStyle ="#ffffff";
+    l.fillStyle ="#F5DEB3";
     l.beginPath();
     l.rect(x,y,sizex,sizey);
     l.fill();
@@ -186,19 +188,19 @@ function update() {
       
       for (var i = 0; i <= 8; i++){
         if (brokenBrick[j][i] == 0){
-          j == 0 && i!=1 && i!=5? l.fillStyle = "#b537f2" : console.log();
-          j == 0 && i==1? l.fillStyle = "#ff0000" : console.log();
-          j == 0 && i==5? l.fillStyle = "#ff0000" : console.log();
+          j == 0 && i!=1 && i!=5? l.fillStyle = "#8B4513" : console.log();
+          j == 0 && i==1? l.fillStyle = "#2F4F4F" : console.log();
+          j == 0 && i==5? l.fillStyle = "#2F4F4F" : console.log();
 
-      j == 1 && i!=3 && i!=7? l.fillStyle = "#3cb9f2" : console.log();
-      j==1 && i==3 ? l.fillStyle = "#ff0000" : console.log();
-      j==1 && i==7 ? l.fillStyle = "#ff0000" : console.log();
-      j == 2 && i!=1 && i!=5? l.fillStyle = "#09fbd3" : console.log();
-      j==2 && i==1 ? l.fillStyle = "#ff0000" : console.log();
-      j==2 && i==5 ? l.fillStyle = "#ff0000" : console.log();
-      j == 3 && i!=3  && i!=7? l.fillStyle = "#f5d300" : console.log();
-      j == 3 && i==3 ? l.fillStyle = "#ff0000" : console.log();
-      j == 3 && i==7 ? l.fillStyle = "#ff0000" : console.log();
+      j == 1 && i!=3 && i!=7? l.fillStyle = "#A0522D" : console.log();
+      j==1 && i==3 ? l.fillStyle = "##2F4F4F" : console.log();
+      j==1 && i==7 ? l.fillStyle = "##2F4F4F" : console.log();
+      j == 2 && i!=1 && i!=5? l.fillStyle = "#D2691E" : console.log();
+      j==2 && i==1 ? l.fillStyle = "#2F4F4F" : console.log();
+      j==2 && i==5 ? l.fillStyle = "#2F4F4F" : console.log();
+      j == 3 && i!=3  && i!=7? l.fillStyle = "#F4A460" : console.log();
+      j == 3 && i==3 ? l.fillStyle = "#2F4F4F" : console.log();
+      j == 3 && i==7 ? l.fillStyle = "#2F4F4F" : console.log();
           brickTouched = 0;
           brickCollisionLogic(200 + 82*i,150 + 42*j,80,40);
           l.beginPath();
@@ -253,7 +255,7 @@ function update() {
       position = {x:x + 0, y:y - 50}; //Initial Behaviour : follow the player
     }
 
-    l.fillStyle = "#ffffff";
+    l.fillStyle = "#DC143C";
     l.beginPath();
     l.arc(position.x, position.y, radius, 0, Math.PI*2, false);
     l.fill();
